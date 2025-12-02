@@ -33,17 +33,11 @@ def process(line: str) -> int:
     logger.debug(f"Processing line: {line}")
     
     # checking length and first character
-    if len(line) > 3:
-        raise ValueError("Line length exceeds 3 characters.")
     if line[0] not in ['L', 'R']:
         raise ValueError("First character must be 'L' or 'R'.")
     
     # extract the number part
-    result = 0
-    if len(line) == 2:
-        result = int(line[1])
-    if len(line) == 3:
-        result = int(line[1:3])
+    result = int(line[1:])
         
     # get the sign from the first character
     first_char = line[0]
