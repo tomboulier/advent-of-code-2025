@@ -2,6 +2,8 @@
 Advent of Code 2025 - Day 1
 """
 
+import os
+
 
 def part1(input_data):
     """Solve part 1 of the puzzle."""
@@ -18,7 +20,8 @@ def part2(input_data):
 def main():
     """Main entry point."""
     # Read input from file
-    with open('input.txt', 'r') as f:
+    input_path = os.path.join(os.path.dirname(__file__), 'input.txt')
+    with open(input_path, 'r') as f:
         input_data = f.read().strip()
     
     # Solve and print results
